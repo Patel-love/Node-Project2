@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const connection = require("./config/db");
 const UserModel = require("./model/model");
-
 const port = 9000;
+
 app.set("view engine", "ejs");
 
 app.use(express.urlencoded());
@@ -50,5 +50,5 @@ app.listen(port, (error) => {
         return;
     }
     connection();
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port : ${port}`);
 });
