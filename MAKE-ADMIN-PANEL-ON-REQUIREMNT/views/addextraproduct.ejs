@@ -1,0 +1,45 @@
+<%- include("header") %>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Add Sub product</h4>
+                                   
+                                    <form class="forms-sample" action="/insertextraproduct" method="post">
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1">Add extra product</label>
+                                            <input type="text" class="form-control"  name="extraproductName" id="exampleInputUsername1"
+                                                placeholder="sub product Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1">product</label>
+                                            <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="productId">
+                                                <% productes.map((element)=>{ %>
+                                                    <option value="<%= element.id  %>"><%= element.product %></option>
+                                              <%  }) %>
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1">sub product</label>
+                                            <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="subproductId">
+                                                <% subproductes.map((element)=>{ %>
+                                                    <option value="<%= element.id  %>"><%= element.subproductName %></option>
+                                              <%  }) %>
+                                              </select>
+                                        </div>
+                                       
+                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <%- include("footer") %>
