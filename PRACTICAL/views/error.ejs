@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <%- include('partials/navbar', { user: locals.user }) %>
+    <div class="container mx-auto mt-8 max-w-md">
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Error!</strong>
+            <span class="block sm:inline"><%= message %></span>
+        </div>
+        <div class="mt-4">
+            <a href="/" class="text-blue-500 hover:text-blue-700">Go back home</a>
+        </div>
+    </div>
+</body>
+</html>

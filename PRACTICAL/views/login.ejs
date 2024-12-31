@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <%- include('partials/navbar', { user: locals.user }) %>
+    <div class="container mx-auto mt-8 max-w-md">
+        <form action="/auth/login" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl mb-4">Login</h2>
+            <% if (locals.error) { %>
+                <div class="bg-red-100 text-red-700 p-2 rounded mb-4"><%= error %></div>
+            <% } %>
+            <div class="mb-4">
+                <label class="block mb-2">Username</label>
+                <input type="text" name="username" required class="w-full p-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label class="block mb-2">Password</label>
+                <input type="password" name="password" required class="w-full p-2 border rounded">
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Login
+            </button>
+        </form>
+    </div>
+</body>
+</html>

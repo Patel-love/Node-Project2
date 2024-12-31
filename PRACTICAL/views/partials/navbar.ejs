@@ -1,0 +1,55 @@
+<!-- <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-white font-bold">Task Manager</a>
+      <div class="flex items-center">
+        <% if (user) { %>
+          <a href="/tasks" class="text-white mx-2">My Tasks</a>
+          <% if (user.role === 'admin') { %>
+            <a href="/tasks/all" class="text-white mx-2">All Tasks</a>
+          <% } %>
+          <a href="/auth/logout" class="text-white mx-2">Logout</a>
+        <% } else { %>
+          <a href="/auth/login" class="text-white mx-2">Login</a>
+          <a href="/auth/register" class="text-white mx-2">Register</a>
+        <% } %>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- views/partials/navbar.ejs -->
+<!-- <nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-white font-bold">Task Manager</a>
+      <div class="flex items-center">
+          <% if (locals.user) { %>
+              <a href="/tasks" class="text-white mx-2">My Tasks</a>
+              <% if (locals.user.role === 'admin') { %>
+                  <a href="/tasks/all" class="text-white mx-2">All Tasks</a>
+              <% } %>
+              <a href="/auth/logout" class="text-white mx-2">Logout</a>
+          <% } else { %>
+              <a href="/auth/login" class="text-white mx-2">Login</a>
+              <a href="/auth/register" class="text-white mx-2">Register</a>
+          <% } %>
+      </div>
+  </div>
+</nav> -->
+
+<!-- views/partials/navbar.ejs -->
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-white font-bold">Task Manager</a>
+      <div class="flex items-center">
+          <% if (locals.user) { %>
+              <a href="/tasks" class="text-white mx-2">My Tasks</a>
+              <% if (locals.user.role === 'admin') { %>
+                  <a href="/tasks/all" class="text-white mx-2">All Tasks</a>
+              <% } %>
+              <a href="/auth/logout" class="text-white mx-2">Logout</a>
+          <% } else { %>
+              <a href="/auth/login" class="text-white mx-2">Login</a>
+              <a href="/auth/register" class="text-white mx-2">Register</a>
+          <% } %>
+      </div>
+  </div>
+</nav>
